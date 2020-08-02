@@ -100,7 +100,8 @@ Vagrant.configure("2") do |config|
     sudo apt-mark hold kubelet kubeadm kubectl
 
     # configure master node
-    # sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+    # https://knowledge.sakura.ad.jp/20955/
+    # sudo kubeadm init --pod-network-cidr=10.100.0.0/16 --apiserver-advertise-address=192.168.33.21
     # install calico
     # https://docs.projectcalico.org/getting-started/kubernetes/quickstart
     # kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
